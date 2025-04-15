@@ -3,9 +3,11 @@
 // "php -S localhost:5500"
 // go to http://localhost:5500/connect.php
 
-$servername = "127.0.0.1";  // or "localhost"
+
 $username = "root";         // MySQL username
-$password = ""; // MySQL password
+$password = "";             // MySQL password
+
+$servername = "127.0.0.1";  // or "localhost"
 $dbname = "users";  // The database you want to connect to (e.g., "users")
 
 // Create connection
