@@ -1,0 +1,16 @@
+
+-- create DB
+CREATE DATABASE IF NOT EXISTS QuizDB;
+
+-- Use the database
+USE QuizDB;
+
+-- Create the 'users' table only if it doesn't exist
+CREATE TABLE IF NOT EXISTS users (
+    username VARCHAR(50) NOT NULL,
+    pword VARCHAR(50) NOT NULL
+);
+
+-- to view data in table
+USE QuizDB;
+SELECT * FROM users;
