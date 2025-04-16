@@ -15,4 +15,5 @@ CREATE TABLE IF NOT EXISTS users (
 USE QuizDB;
 SELECT * FROM users;
 
-ff
+alex nguyen
+valeria campos

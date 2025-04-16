@@ -4,7 +4,7 @@
 
 $servername = "127.0.0.1";
 $username = "root";
-$password = "18245Bw!";  // Your MySQL password
+$password = "ed8Vc20!";  // Your MySQL password
 $dbname = "quizdb";
 
 // Create connection
