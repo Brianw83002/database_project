@@ -16,3 +16,4 @@ USE QuizDB;
 SELECT * FROM users;
 
 alex nguyen
+valeria campos
