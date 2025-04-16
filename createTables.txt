@@ -14,3 +14,5 @@ CREATE TABLE IF NOT EXISTS users (
 -- to view data in table
 USE QuizDB;
 SELECT * FROM users;
+
+alex nguyen
