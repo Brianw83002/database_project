@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$password = "ed8Vc20!"; // use your MySQL root password if you set one
+$password = ""; // use your MySQL root password if you set one
 $database = "quizdb";
 
 // Create connection
