@@ -1,0 +1,47 @@
+<!-- create_quiz.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Quiz</title>
+  <script>
+    function addQuestion() {
+      const container = document.getElementById('questions_container');
+      const index = container.children.length;
+      const block = document.createElement('div');
+      block.className = 'question_block';
+      block.innerHTML = `
+        <h3>Question ${index + 1}</h3>
+        <label>Question:<br>
+          <input type="text" name="question_text[]" required>
+        </label><br>
+        <label>Correct Answer:<br>
+          <input type="text" name="correct_answer[]" required>
+        </label><br>
+        <label>Wrong Answer 1:<br>
+          <input type="text" name="wrong_answer1[]" required>
+        </label><br>
+        <label>Wrong Answer 2:<br>
+          <input type="text" name="wrong_answer2[]" required>
+        </label><br>
+        <label>Wrong Answer 3:<br>
+          <input type="text" name="wrong_answer3[]" required>
+        </label><br><hr>
+      `;
+      container.appendChild(block);
+    }
+    window.onload = addQuestion;
+  </script>
+</head>
+<body>
+  <h1>Create Quiz</h1>
+  <form action="../php/create_quiz.php" method="post">
+    <label>Quiz Title:<br>
+      <input type="text" name="quiz_title" required>
+    </label><br><br>
+    <div id="questions_container"></div>
+    <button type="button" onclick="addQuestion()">Add Another Question</button><br><br>
+    <button type="submit">Submit Quiz</button>
+  </form>
+</body>
+</html>
