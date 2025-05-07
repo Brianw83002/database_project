@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: rgb(45, 45, 131);
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  button, a.button {
+    margin: 20px 0; /* Added margin for spacing */
+    padding: 12px 20px; /* Increased padding for a better look */
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%; /* Make the buttons span the width of the container */
+    box-sizing: border-box; /* Ensures padding doesn't overflow the container */
+  }
+  
+  a.button:hover, button:hover {
+    background-color: #0056b3;
+  }
+  
+  form {
+    text-align: center;
+  }

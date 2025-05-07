@@ -4,7 +4,7 @@ session_start();
 // Database connection settings
 $servername = "127.0.0.1";
 $username = "root";
-$password = "";  // your MySQL password
+$password = "18245Bw!";  // your MySQL password
 $dbname = "quizdb";  // your database name
 
 // Create connection
@@ -27,8 +27,9 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows === 1) {
-    // Successful login
-    header("Location: ../html/home.html");
+    // ✅ Successful login — store username in session
+    $_SESSION['username'] = $user;
+    header("Location: ../php/userPage.php"); // 🔁 redirect to a PHP file instead of HTML
     exit();
 } else {
     // Failed login

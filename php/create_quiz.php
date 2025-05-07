@@ -57,6 +57,6 @@ $insertQ->close();
 $conn->close();
 
 // 6) Redirect to display page or confirmation
-header("Location: display_quiz.html");
+header("Location: display_quiz.php");
 exit;
 ?>

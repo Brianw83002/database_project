@@ -1,7 +1,8 @@
 <?php
+//THIS FILE IS FOR CREATE ACCOUNT
 $host = "localhost";
 $user = "root";
-$password = ""; // use your MySQL root password if you set one
+$password = "18245Bw!"; // use your MySQL root password if you set one
 $database = "quizdb";
 
 // Create connection
