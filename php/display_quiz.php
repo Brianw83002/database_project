@@ -1,13 +1,6 @@
 <?php
-$servername = "127.0.0.1";
-$username   = "root";
-$password   = "18245Bw!";
-$dbname     = "quizdb";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once 'connect.php'; // ✅ Include the connection function
+$conn = getDBConnection("quizdb"); // Pass your target DB name
 
 $sql = "SELECT title, question_text, correct_answer, wrong_answer1, wrong_answer2, wrong_answer3 FROM quiz_questions ORDER BY title";
 $result = $conn->query($sql);

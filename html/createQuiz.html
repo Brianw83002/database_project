@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Create Quiz</title>
+  <link rel="stylesheet" href="../css/createQuiz.css">
+
   <script>
     function addQuestion() {
       const container = document.getElementById('questions_container');
@@ -32,16 +34,22 @@
     }
     window.onload = addQuestion;
   </script>
+
 </head>
 <body>
-  <h1>Create Quiz</h1>
-  <form action="../php/create_quiz.php" method="post">
-    <label>Quiz Title:<br>
-      <input type="text" name="title" required>
-    </label><br><br>
-    <div id="questions_container"></div>
-    <button type="button" onclick="addQuestion()">Add Another Question</button><br><br>
-    <button type="submit">Submit Quiz</button>
-  </form>
+  <div class="container">
+    <h1>Create Quiz</h1>
+    <form action="../php/create_quiz.php" method="post">
+      <div class="title-group">
+        <label for="title">Quiz Title:</label><br>
+        <input type="text" id="title" name="title" required>
+      </div><br><br>
+
+      <div id="questions_container"></div>
+      <button type="button" onclick="addQuestion()">Add Another Question</button><br><br>
+      <button type="submit">Submit Quiz</button>
+    </form>
+
+  </div>
 </body>
 </html>

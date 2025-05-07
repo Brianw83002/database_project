@@ -1,17 +1,8 @@
 <?php
 //THIS FILE IS FOR CREATE ACCOUNT
-$host = "localhost";
-$user = "root";
-$password = "18245Bw!"; // use your MySQL root password if you set one
-$database = "quizdb";
 
-// Create connection
-$conn = new mysqli($host, $user, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once 'connect.php'; // ✅ Include the connection function
+$conn = getDBConnection("quizdb"); // Pass your target DB name
 
 // Check if form was submitted and required fields are present
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

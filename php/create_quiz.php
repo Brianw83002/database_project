@@ -2,20 +2,13 @@
 // create_quiz.php
 // Handles POST from create_quiz.html
 
-// 1) Database connection — adjust these to your credentials:
-$servername = "127.0.0.1";
-$username   = "root";
-$password   = "18245Bw!";
-$dbname     = "quizdb";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die('DB Connection failed: ' . $conn->connect_error);
-}
-
+require_once 'connect.php'; // ✅ Include the connection function
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     die('Invalid request method.');
 }
+$conn = getDBConnection("quizdb"); // Pass your target DB name
+
+
 
 // Get title (shared for all questions)
 $title = trim($_POST['title'] ?? '');

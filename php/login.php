@@ -1,19 +1,8 @@
 <?php
 session_start();
 
-// Database connection settings
-$servername = "127.0.0.1";
-$username = "root";
-$password = "18245Bw!";  // your MySQL password
-$dbname = "quizdb";  // your database name
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once 'connect.php'; // ✅ Include the connection function
+$conn = getDBConnection("quizdb"); // Pass your target DB name
 
 // Get form values
 $user = $_POST['username'];
