@@ -13,7 +13,7 @@
       block.innerHTML = `
         <h3>Question ${index + 1}</h3>
         <label>Question:<br>
-          <input type="text" name="question_text[]" required>
+          <input type="text" name="question[]" required>
         </label><br>
         <label>Correct Answer:<br>
           <input type="text" name="correct_answer[]" required>
@@ -37,7 +37,7 @@
   <h1>Create Quiz</h1>
   <form action="../php/create_quiz.php" method="post">
     <label>Quiz Title:<br>
-      <input type="text" name="quiz_title" required>
+      <input type="text" name="title" required>
     </label><br><br>
     <div id="questions_container"></div>
     <button type="button" onclick="addQuestion()">Add Another Question</button><br><br>

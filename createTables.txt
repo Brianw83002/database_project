@@ -12,22 +12,23 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 CREATE TABLE IF NOT EXISTS quiz_questions (
-  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  quiz_id INT UNSIGNED NOT NULL,
+  title VARCHAR(255) NOT NULL,
   question_text TEXT NOT NULL,
   correct_answer VARCHAR(255) NOT NULL,
   wrong_answer1 VARCHAR(255) NOT NULL,
   wrong_answer2 VARCHAR(255) NOT NULL,
-  wrong_answer3 VARCHAR(255) NOT NULL,
-  question_order SMALLINT UNSIGNED NOT NULL DEFAULT 1,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  INDEX (quiz_id)
+  wrong_answer3 VARCHAR(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
--- to view data in table
-USE QuizDB;
-SELECT * FROM users;
+
+
+
+
+
+
+
+
+
 
 
