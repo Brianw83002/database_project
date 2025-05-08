@@ -11,12 +11,22 @@
     past it into your php folder
 
 # Setup
-    in the setup for mysql, select:
+    in the setup for mysqlWorkbench, select:
 
-    Custom -> most recent versions of Server -> most recent version of Workbench
+    Custom -> most recent versions of Server and most recent version of Workbench
 
     set a password
 
-    in connect.php set the password to be the same
-     
+    in connect.php set the password to be the same password you use
+
+# in Workbench:
+    create a query by copying all the text in createTables.txt and pasting it to workbench  
+    run the query to set up the tables
+
+# to run
+    access the folder this file is in inside the terminal
+    
+    use the command: php -S localhost:5500
+
+    go to http://localhost:5500/connect.php
    
