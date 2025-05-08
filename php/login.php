@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//CONNECT TO DATABASE USING function
 require_once 'connect.php'; // ✅ Include the connection function
 $conn = getDBConnection("quizdb"); // Pass your target DB name
 

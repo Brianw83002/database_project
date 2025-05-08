@@ -8,8 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 $conn = getDBConnection("quizdb"); // Pass your target DB name
 
-
-
 // Get title (shared for all questions)
 $title = trim($_POST['title'] ?? '');
 
@@ -44,11 +42,9 @@ foreach ($questions as $i => $qtext) {
     $insertQ->bind_param('ssssss', $title, $q, $c, $w1, $w2, $w3);
     $insertQ->execute();
 }
-
 // 5) Cleanup
 $insertQ->close();
 $conn->close();
-
 // 6) Redirect to display page or confirmation
 header("Location: display_quiz.php");
 exit;

@@ -1,11 +1,11 @@
 <?php
-//To run in cmd type 
+//To run in cmd line type 
 // "php -S localhost:5500"
 // go to http://localhost:5500/connect.php
 function getDBConnection($dbname = "quizdb") {
     $servername = "127.0.0.1";
     $username = "root";
-    $password = "18245Bw!";
+    $password = "";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
