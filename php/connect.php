@@ -5,7 +5,7 @@
 function getDBConnection($dbname = "quizdb") {
     $servername = "127.0.0.1";
     $username = "root";
-    $password = "";
+    $password = "18245Bw!";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
